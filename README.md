@@ -16,3 +16,16 @@ Installation
 Sketch > Include library > Manage library  search ชื่อ library แล้วกด install ได้เลย
 
 3.SHT 1x – master  เป็น library ของ temperature sensor
+
+Usage
+
+OLLED สามารถเชื่อมต่อได้ทั้งในรูปแบบ I2C และ SPI 
+
+
+#define OLED_MOSI   9
+#define OLED_CLK   10
+#define OLED_DC    11
+#define OLED_CS    12
+#define OLED_RESET 13
+
+Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
