@@ -1,4 +1,4 @@
-อปกรณ์
+อุปกรณ์
 
 1. Arduino Board
 2. Temperature and Humidity sensor SHT11
