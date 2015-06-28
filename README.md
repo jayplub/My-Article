@@ -8,8 +8,9 @@ Installation
 
 ก่อนอื่นต้องติดตั้ง library ให้กับ Arduino ก่อน ซึ่งสิ่งที่ต้องติดตั้งมีดังนี้
 
-1.Adafriut SSD 1306
-2.Adafriut GFX
+1.Adafriut SSD1306
+
+2.Adafruit GFX
 
 ซึ่งทั้งสองอันนี้เป็น Library ของ OLED display สามารถติดตั้งผ่าน Arduino IDE ได้เลย โดยเปิดโปรแกรมแล้วเข้าไปที่
 Sketch > Include library > Manage library  search ชื่อ library แล้วกด install ได้เลย
