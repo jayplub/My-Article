@@ -40,7 +40,7 @@ SHT11 สามารถอ่านค่าอุณหภูมิแแล�
 
 เราสามารถนำค่าจากsensorมาแสดงบนจอOLEDได้
 
-          void readValue(void) {
+       void readValue(void) {
 
       temp_c = sht1x.readTemperatureC();
       humidity = sht1x.readHumidity();
@@ -56,7 +56,8 @@ SHT11 สามารถอ่านค่าอุณหภูมิแแล�
       display.println(temp_c);
       display.setCursor(120,0);
       display.println("C");
-   
+            
+      }
 
 
 
