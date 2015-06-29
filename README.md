@@ -44,18 +44,33 @@ SHT11 สามารถอ่านค่าอุณหภูมิแแล�
 
       temp_c = sht1x.readTemperatureC();
       humidity = sht1x.readHumidity();
- 
-      display.setTextSize(2); // กำหนดขนาดตัวอักษร
-      display.setTextColor(WHITE); // กำหนดสีตัวอักษร
   
-      display.setCursor(0,0); // กำหนดตำแหน่งที่จะแสดง (x,y)
-      display.clearDisplay();
-      display.println(F("Temp")); // ข้อความที่จะแสดง
+      Serial.print("Temperature: ");
+      Serial.print(temp_c , DEC);
+      Serial.print("C / ");
+  
+      display.setTextSize(2);
+      display.setTextColor(WHITE);
+  
+      display.setCursor(0,0);
+  
+      display.println(F("Temp"));
       display.display();
       display.setCursor(50,0);
       display.println(temp_c);
       display.setCursor(120,0);
       display.println("C");
+  
+      display.setCursor(0,20);
+      display.println(F("Humi"));
+      display.display();
+      display.setCursor(50,20);
+      display.println(humidity);
+      display.display();
+      display.setCursor(120,20);
+      display.println("%");
+      display.display();
+  
             
       }
 
