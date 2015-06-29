@@ -23,18 +23,18 @@ OLLED สามารถเชื่อมต่อได้ทั้งใน�
 
 เช่นเดียวกันกับ SHT11 ที่เป็น I2C เราสามารถกำหนด SCL และ SDA ได้เช่นกัน
 
-        #include <SHT1x.h>
-        #define dataPin 10
-        #define clockPin 11
-        SHT1x sht1x(dataPin, clockPin);
+      #include <SHT1x.h>
+      #define dataPin 10
+      #define clockPin 11
+      SHT1x sht1x(dataPin, clockPin);
 
 
 # ReadTemperature and Humidity
 
 SHT11 สามารถอ่านค่าอุณหภูมิแแล้วreturnออกมาเป็นค่าfloatได้ 
 
-         float tempC = sht1x.readTemperatureC();`
-         float humidity = sht1x.readHumidity);`
+      float tempC = sht1x.readTemperatureC();`
+      float humidity = sht1x.readHumidity);`
 
 # Display Value on OLED
 
@@ -42,20 +42,20 @@ SHT11 สามารถอ่านค่าอุณหภูมิแแล�
 
           void readValue(void) {
 
-         temp_c = sht1x.readTemperatureC();
-         humidity = sht1x.readHumidity();
+      temp_c = sht1x.readTemperatureC();
+      humidity = sht1x.readHumidity();
  
-         display.setTextSize(2); // กำหนดขนาดตัวอักษร
-         display.setTextColor(WHITE); // กำหนดสีตัวอักษร
+      display.setTextSize(2); // กำหนดขนาดตัวอักษร
+      display.setTextColor(WHITE); // กำหนดสีตัวอักษร
   
-         display.setCursor(0,0); // กำหนดตำแหน่งที่จะแสดง (x,y)
-         display.clearDisplay();
-         display.println(F("Temp")); // ข้อความที่จะแสดง
-         display.display();
-         display.setCursor(50,0);
-         display.println(temp_c);
-         display.setCursor(120,0);
-         display.println("C");
+      display.setCursor(0,0); // กำหนดตำแหน่งที่จะแสดง (x,y)
+      display.clearDisplay();
+      display.println(F("Temp")); // ข้อความที่จะแสดง
+      display.display();
+      display.setCursor(50,0);
+      display.println(temp_c);
+      display.setCursor(120,0);
+      display.println("C");
    
 
 
